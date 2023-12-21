@@ -10,7 +10,7 @@ async function example () {
     await driver.findElement(By.id('password')).sendKeys('Seid123.', Key.RETURN);
     await driver.sleep(5000);
     //open unit
-    const unitElement = await driver.wait(until.elementLocated(By.id('unit')), 10000);
+    const unitElement = await driver.wait(until.elementLocated(By.id('unit')), 60000);
     await driver.wait(until.elementIsVisible(unitElement), 10000);
     await unitElement.click();
     await driver.sleep(4000);
@@ -22,12 +22,12 @@ async function example () {
     await driver.findElement(By.id('submitComment')).click();
     await driver.sleep(2000);
     await driver.findElement(By.id('confirm')).click();
-    await driver.sleep(2000);
+    await driver.sleep(5000);
     //delete comment
     await driver.findElement(By.id('deleteComment')).click();
     await driver.sleep(2000);
     await driver.findElement(By.id('confirm')).click();
-    await driver.sleep(2000);
+    await driver.sleep(5000);
     //open navigation tab
     await driver.findElement(By.id('ime')).click();
     await driver.sleep(2000);
